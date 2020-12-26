@@ -1,6 +1,6 @@
 {
   "name": "@one-cli/core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "> TODO: description",
   "author": "<1617301803@qq.com>>",
   "homepage": "",
@@ -21,6 +21,6 @@
   },
   "dependencies": {
     "@babel/core": "^7.12.10",
-    "@one-cli/utils": "^1.0.0"
+    "@one-cli/utils": "^1.0.1"
   }
 }
