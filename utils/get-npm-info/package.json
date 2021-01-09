@@ -1,5 +1,5 @@
 {
-  "name": "get-npm-info",
+  "name": "@one-cli/get-npm-info",
   "version": "1.0.2",
   "description": "get npm info",
   "author": "徐昭 <x1617301803@gmail.com>",
@@ -27,5 +27,6 @@
     "axios": "^0.21.1",
     "semver": "^7.3.4",
     "url-join": "^4.0.1"
-  }
+  },
+  "gitHead": "e04aa204c3837da4bafe903490c1f14db9c22338"
 }

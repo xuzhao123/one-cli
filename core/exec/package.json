@@ -24,10 +24,11 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@one-cli/log": "file:../../utils/log",
-    "@one-cli/package": "file:../../models/package"
+    "@one-cli/log": "^1.0.2",
+    "@one-cli/package": "^1.0.2"
   },
   "bugs": {
     "url": "https://github.com/xuzhao123/one-cli/issues"
-  }
+  },
+  "gitHead": "e04aa204c3837da4bafe903490c1f14db9c22338"
 }

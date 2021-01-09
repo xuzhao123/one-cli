@@ -24,11 +24,11 @@
   },
   "dependencies": {
     "@babel/core": "^7.12.10",
-    "@one-cli/exec": "file:../exec",
+    "@one-cli/exec": "^1.0.2",
     "@one-cli/get-npm-info": "file:../../utils/get-npm-info",
-    "@one-cli/init": "file:../../commands/init",
-    "@one-cli/log": "file:../../utils/log",
-    "@one-cli/utils": "file:../../utils/utils",
+    "@one-cli/init": "^1.0.2",
+    "@one-cli/log": "^1.0.2",
+    "@one-cli/utils": "^1.0.2",
     "colors": "^1.4.0",
     "commander": "^6.2.1",
     "dedent": "^0.7.0",
@@ -39,5 +39,6 @@
     "semver": "^7.3.4",
     "user-home": "^2.0.0",
     "yargs": "^16.2.0"
-  }
+  },
+  "gitHead": "e04aa204c3837da4bafe903490c1f14db9c22338"
 }
