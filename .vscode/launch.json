@@ -14,7 +14,7 @@
             "program": "/Users/xuzhao/.nvm/versions/node/v10.16.0/bin/one-cli",
             "console": "integratedTerminal",
             "args": [
-                "ll"
+                "init"
             ]
         }
     ]

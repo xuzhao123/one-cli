@@ -4,8 +4,10 @@ const path = require('path');
 const fs = require('fs');
 const semver = require('semver');
 const colors = require('colors');
+const commander = require('commander');
 const userHome = require('user-home');
 const log = require('@one-cli/log');
+const exec = require('@one-cli/exec');
 const pkg = require('../package.json');
 const constant = require('./const');
 
@@ -18,18 +20,67 @@ function pathExist(path) {
     }
 }
 
-function core() {
+async function core() {
     try {
-        checkPkgVersion();
-        checkNodeVersion();
-        checkRoot();
-        checkUserHome();
-        checkInputArgs();
-        checkEnv();
-        checkGlobalUpdate();
+        prepare();
+        registerCommander();
     } catch (e) {
         log.error(e.message);
+        if (process.env.LOG_LEVEL === 'verbose') {
+            console.log(e);
+        }
     }
+}
+
+function registerCommander() {
+    const program = new commander.Command();
+    program
+        .name(Object.keys(pkg.bin)[0])
+        .usage('<command> [options]')
+        .version(pkg.version)
+        .option('-d, --debug', 'debug', false)
+        .option('-tp, --targetPath <targetePath>', 'target path');
+
+    program
+        .command('init [projectName]')
+        .option('-f, --force', 'force init project')
+        .action(exec)
+
+    program.on('option:debug', () => {
+        if (program.debug) {
+            process.env.LOG_LEVEL = 'verbose';
+        } else {
+            process.env.LOG_LEVEL = 'info';
+        }
+        log.level = process.env.LOG_LEVEL;
+    });
+
+    program.on('option:targetPath', () => {
+        process.env.CLI_TARGET_PATH = program.targetPath;
+    });
+
+    program.on('command:*', (obj) => {
+        log.error(colors.red('unknow command: ' + obj[0]));
+        const availableCommands = program.commands.map(cmd => cmd.name());
+        if (availableCommands.length > 0) {
+            log.error(colors.red('enable command: ' + availableCommands.join(',')));
+        }
+    });
+
+    program.parse(process.argv);
+
+    if (program.args && program.args.length === 0) {
+        program.outputHelp();
+    }
+}
+
+async function prepare() {
+    checkPkgVersion();
+    checkNodeVersion();
+    checkRoot();
+    checkUserHome();
+    checkEnv();
+    await checkGlobalUpdate();
 }
 
 async function checkGlobalUpdate() {

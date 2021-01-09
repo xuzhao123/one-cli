@@ -1,0 +1,33 @@
+{
+  "name": "@one-cli/exec",
+  "version": "1.0.1",
+  "description": "> TODO: description",
+  "author": "徐昭 <x1617301803@gmail.com>",
+  "homepage": "https://github.com/xuzhao123/one-cli#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuzhao123/one-cli.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@one-cli/package": "file:../../models/package",
+    "@one-cli/log": "file:../../utils/log"
+  },
+  "bugs": {
+    "url": "https://github.com/xuzhao123/one-cli/issues"
+  }
+}

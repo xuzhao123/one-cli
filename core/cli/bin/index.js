@@ -1,8 +1,5 @@
 #! /usr/bin/env node
 
-const utils = require('@one-cli/utils');
-utils();
-
 const importLocal = require('import-local');
 
 if (importLocal(__filename)) {
