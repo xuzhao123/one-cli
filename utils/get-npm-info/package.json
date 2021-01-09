@@ -13,6 +13,9 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xuzhao123/one-cli.git"
@@ -28,5 +31,5 @@
     "semver": "^7.3.4",
     "url-join": "^4.0.1"
   },
-  "gitHead": "e04aa204c3837da4bafe903490c1f14db9c22338"
+  "gitHead": "376e0d7ee4ffa1739fe309f2d0aceb210659e5a2"
 }

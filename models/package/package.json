@@ -28,11 +28,11 @@
   },
   "dependencies": {
     "@one-cli/format-path": "^1.0.3",
-    "@one-cli/get-npm-info": "file:../../utils/get-npm-info",
+    "@one-cli/get-npm-info": "^1.0.3",
     "fs-extra": "^9.0.1",
     "npminstall": "^4.10.0",
     "path-exists": "^4.0.0",
     "pkg-dir": "^5.0.0"
   },
-  "gitHead": "e04aa204c3837da4bafe903490c1f14db9c22338"
+  "gitHead": "376e0d7ee4ffa1739fe309f2d0aceb210659e5a2"
 }
