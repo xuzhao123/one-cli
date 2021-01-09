@@ -1,6 +1,6 @@
 {
   "name": "@one-cli/core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "> TODO: description",
   "author": "<1617301803@qq.com>>",
   "homepage": "",
@@ -24,11 +24,11 @@
   },
   "dependencies": {
     "@babel/core": "^7.12.10",
+    "@one-cli/exec": "file:../exec",
     "@one-cli/get-npm-info": "file:../../utils/get-npm-info",
+    "@one-cli/init": "file:../../commands/init",
     "@one-cli/log": "file:../../utils/log",
     "@one-cli/utils": "file:../../utils/utils",
-    "@one-cli/exec": "file:../exec",
-    "@one-cli/init": "file:../../commands/init",
     "colors": "^1.4.0",
     "commander": "^6.2.1",
     "dedent": "^0.7.0",

@@ -1,6 +1,6 @@
 {
   "name": "@one-cli/exec",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "> TODO: description",
   "author": "徐昭 <x1617301803@gmail.com>",
   "homepage": "https://github.com/xuzhao123/one-cli#readme",
@@ -24,8 +24,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@one-cli/package": "file:../../models/package",
-    "@one-cli/log": "file:../../utils/log"
+    "@one-cli/log": "file:../../utils/log",
+    "@one-cli/package": "file:../../models/package"
   },
   "bugs": {
     "url": "https://github.com/xuzhao123/one-cli/issues"
